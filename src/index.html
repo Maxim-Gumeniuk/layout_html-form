@@ -1,17 +1,168 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    >
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
+
   <body>
     <h1>HTML Form</h1>
+    <form action="http://localhost:300/api" method="post">
+      <fieldset class="fieldset">
+        <legend>
+          Personal information
+        </legend>
+
+        <div class="form-field">
+          <label>
+          Surname:
+            <input type="text"
+            name="surname"
+            required
+            autocomplete="off">
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+          Name:
+            <input type="text"
+            name="user-name"
+            required
+            autocomplete="off">
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+          How old are you?
+            <input type="number"
+            name="how-old"
+            min ="1"
+            max="100"
+            value="12"
+            maxlength="3"
+            required>
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+          Full date of birth:
+            <input type="date"
+            name="birthdate"
+            required>
+          </label>
+        </div>
+        <div class="form-field">
+          <label for="term-and-conditions">
+            I accept the term of the agreement
+          </label>
+          <input type="checkbox"
+          name="terms"
+          id="term-and-conditions"
+          required>
+
+        </div>
+      </fieldset>
+      <fieldset class="fieldset">
+        <legend>Registration</legend>
+        <div class="form-field">
+          <label>
+            E-mail:
+            <input type="email"
+            name="email"
+            placeholder="email@example.com">
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label>
+            Password:
+            <input type="password"
+            name="user-password"
+            >
+          </label>
+        </div>
+
+      </fieldset>
+      <fieldset class = "fieldset">
+        <legend>An interesting fact about you!</legend>
+        <div class="form-field">
+          <label>
+            Do you like cats?
+            <input type="radio"
+            name="love"
+            value="yes"> Yes
+            <input type="radio"
+            name="hates"
+            value="no"> No
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            What is your favorite color?
+            <input
+              type="color"
+              name="color"
+            >
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            What time do you go to bed?
+            <input type="time"
+            name="time">
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            What are your favoriute brand of cars?
+            <select name="cars" multiple>
+              <option value="BMW">BMW</option>
+              <option value="Audi">Audi</option>
+              <option value="Lada">Lada</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-field">
+          <label>
+            How do you rate our work?
+            <input type="range"
+            name="rate-our-work"
+            value="0">
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="fieldset">
+        <legend>Additional info:</legend>
+        <div class="form-field">
+          Comments:
+          <textarea name="info"
+          rows="2"
+          cols="20"
+          autocomplete="off"
+          maxlength="80"></textarea>
+        </div>
+        <div class="form-fields">
+          <label>
+            Would you recommend us?
+            <select name="recommendation">
+              <option value="yes">
+                Yes
+              </option>
+              <option value="no">
+                No
+              </option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+    </form>
+    </div>
     <script type="text/javascript" src="./main.js"></script>
   </body>
+
 </html>
